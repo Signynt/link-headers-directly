@@ -1,7 +1,7 @@
 {
-  "name": "obsidian-sample-plugin",
+  "name": "link-headers-directly",
   "version": "0.12.0",
-  "description": "This is a sample plugin for Obsidian (https://obsidian.md)",
+  "description": "When a header is linked, preview mode will show only the header, and not the note name.",
   "main": "main.js",
   "scripts": {
     "dev": "rollup --config rollup.config.js -w",
