@@ -25,6 +25,10 @@ It would be displayed like this in preview mode:
 
 > One of my favorite trees is the **Trees > Birch**, because it reminds me of spring.
 
+![without plugin](https://raw.githubusercontent.com/signynt/link-headers-directly/main/resources/gifs/without-plugin.gif)
+
 This looks unnatural in most sentences, and makes it tedious to have to change the preview text on many links to headings. With this plugin enabled the text would instead be displayed like this in preview mode:
 
 > One of my favorite trees is the **Birch**, because it reminds me of spring.
+
+![with plugin](https://raw.githubusercontent.com/signynt/link-headers-directly/main/resources/gifs/with-plugin.gif)
