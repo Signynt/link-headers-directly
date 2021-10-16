@@ -1,22 +1,13 @@
-import { App, Modal, Notice, Plugin, PluginSettingTab, Setting, MarkdownPostProcessor, MarkdownPostProcessorContext } from 'obsidian';
+import { App, Plugin, MarkdownPostProcessor, MarkdownPostProcessorContext } from 'obsidian';
 
-interface MyPluginSettings {
-	mySetting: string;
-}
-
-const DEFAULT_SETTINGS: MyPluginSettings = {
-	mySetting: 'default'
-}
-
-export default class MyPlugin extends Plugin {
-	settings: MyPluginSettings;
+export default class LinkHeadersDirectly extends Plugin {
 
 	async onload() {
     let postProc: MarkdownPostProcessor;
 
-	postProc = (el: HTMLElement, ctx: MarkdownPostProcessorContext) => {
+		postProc = (el: HTMLElement, ctx: MarkdownPostProcessorContext) => {
 
-	    var linkElements = el.getElementsByClassName("internal-link");
+	    var linkElements = el.querySelectorAll('a.internal-link');
 	    var barIndex, alias;
 	    for(var i = 0; i < linkElements.length; i++) {
 		    barIndex = (linkElements[i] as HTMLElement).innerText.indexOf(">");
@@ -32,13 +23,5 @@ export default class MyPlugin extends Plugin {
 
 	onunload() {
 		console.log('unloading plugin');
-	}
-
-	async loadSettings() {
-		this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
-	}
-
-	async saveSettings() {
-		await this.saveData(this.settings);
 	}
 }
