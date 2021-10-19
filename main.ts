@@ -11,7 +11,7 @@ export default class LinkHeadersDirectly extends Plugin {
 			let linkElements = el.querySelectorAll('a.internal-link');
 			let barIndex, alias;
 
-			for(var i = 0; i < linkElements.length; i++) {
+			for(let i = 0; i < linkElements.length; i++) {
 
 				let linkAsHTML = (linkElements[i] as HTMLElement).innerText;
 
